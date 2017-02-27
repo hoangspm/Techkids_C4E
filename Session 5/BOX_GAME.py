@@ -9,15 +9,15 @@ def write_game(px,py,bx,by,h,w):
     for y in range(h):
         for x in range(w):
             if [x,y] == [px,py]:
-                print("P", end="")
+                print("P ", end="")
             elif [x,y] == [wallx,wally]:
-                print("#", end="")
+                print("# ", end="")
             elif match(x,y,bx,by):
-                print("B", end="")
+                print("B ", end="")
             elif match(x,y,hx,hy):
-                print("*", end="")
+                print("* ", end="")
             else:
-                print("-", end="")
+                print("- ", end="")
         print()
 
 def object_move(move,x,y):
@@ -63,6 +63,7 @@ def check_move(move,x,y):
                     [bx[i],by[i]] = [next_x, next_y]
                     visited[i] = False
                     return (True)
+                visited[i] = False
                 return (False)
         return(True)
     return (False)
@@ -77,7 +78,6 @@ by = [2,4,3,3]
 hx = [1,0,0,1]
 hy = [1,1,2,2]
 visited = [False]*4
-print(visited)
 wallx = 1 #wall
 wally = 3
 
