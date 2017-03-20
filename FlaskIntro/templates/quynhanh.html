@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quynh Anh</title>
+</head>
+<body>
+    <h1>Quynh Anh</h1>
+    <ul>
+        {% for item in girl_list %}
+            <li>
+                <img src={{ item["src"] }} alt="" width="600">
+                <h3>{{ item["title"] }}</h3>
+                <p>{{ item["tags"] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
